@@ -7,12 +7,11 @@ main: snare\BetterBrag\BetterBrag
 permissions:
   brag.command:
     default: true
-    children:
-      brag.command.start:
-        default: true
-      brag.command.stop:
-        default: true
-      brag.command.view:
-        default: true
-      brag.command.list:
-        default: true
+  brag.command.start:
+    default: true
+  brag.command.stop:
+    default: true
+  brag.command.view:
+    default: true
+  brag.command.list:
+    default: true
