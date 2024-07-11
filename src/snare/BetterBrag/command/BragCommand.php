@@ -26,15 +26,16 @@ class BragCommand extends BaseCommand
      */
     public function onRun(CommandSender $sender, string $aliasUsed, array $args): void
     {
-        $this->registerSubCommand(new BragListSubCommand());
-        $this->registerSubCommand(new BragStartSubCommand());
-        $this->registerSubCommand(new BragStopSubCommand());
-        $this->registerSubCommand(new BragViewSubCommand());
+        $this->sendUsage();
     }
 
     public function prepare() : void
     {
         $this->setPermission("brag.command");
+        $this->registerSubCommand(new BragListSubCommand());
+        $this->registerSubCommand(new BragStartSubCommand());
+        $this->registerSubCommand(new BragStopSubCommand());
+        $this->registerSubCommand(new BragViewSubCommand());
     }
 
     public function getPermission() : void {}
