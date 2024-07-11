@@ -13,7 +13,7 @@ class BragStartSubCommand extends BaseSubCommand
 {
     public function __construct()
     {
-        parent::__construct("start", "Start bragging about the item within your hand.");
+        parent::__construct(BetterBrag::getBetterBrag(), "start", "Start bragging about the item within your hand.");
     }
 
     public function prepare() : void

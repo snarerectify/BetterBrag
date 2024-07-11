@@ -13,7 +13,7 @@ class BragStopSubCommand extends BaseSubCommand
 {
     public function __construct()
     {
-        parent::__construct("stop", "Stop bragging about the item you are currently bragging about.");
+        parent::__construct(BetterBrag::getBetterBrag(), "stop", "Stop bragging about the item you are currently bragging about.");
     }
 
     public function prepare(): void

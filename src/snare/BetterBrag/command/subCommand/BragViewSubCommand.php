@@ -17,7 +17,7 @@ class BragViewSubCommand extends BaseSubCommand
 {
     public function __construct()
     {
-        parent::__construct("view", "View the item a player is bragging about.");
+        parent::__construct(BetterBrag::getBetterBrag(), "view", "View the item a player is bragging about.");
     }
 
     /**

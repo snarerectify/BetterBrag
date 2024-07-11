@@ -11,7 +11,7 @@ class BragListSubCommand extends BaseSubCommand
 {
     public function __construct()
     {
-        parent::__construct("list", "List all current bragging players & corresponding items.");
+        parent::__construct(BetterBrag::getBetterBrag(), "list", "List all current bragging players & corresponding items.");
     }
 
     public function prepare(): void
