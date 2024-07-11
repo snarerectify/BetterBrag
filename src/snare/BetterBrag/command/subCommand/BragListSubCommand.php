@@ -28,8 +28,8 @@ class BragListSubCommand extends BaseSubCommand
 
         $sender->sendMessage(BetterBrag::getBetterBrag()->getConfig()->get("bragging-list-title"));
 
-        foreach (BetterBrag::getBetterBrag()->getBragItems() as $id => $item) {
-            $sender->sendMessage(str_replace(["{PLAYER}", "{ITEM}"], [BetterBrag::getBetterBrag()->getServer()->getPlayerByRawUUID($id)->getName(), $item->getName()], BetterBrag::getBetterBrag()->getConfig()->get("brag-entry")));
+        foreach (BetterBrag::getBetterBrag()->getBragItems() as $name => $item) {
+            $sender->sendMessage(str_replace(["{PLAYER}", "{ITEM}"], [$name, $item->getName()], BetterBrag::getBetterBrag()->getConfig()->get("brag-entry")));
         }
     }
 

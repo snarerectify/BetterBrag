@@ -62,7 +62,7 @@ class BetterBrag extends PluginBase
      */
     public function isBragging(Player $player) : bool
     {
-        return isset($this->bragItems[$player->getUniqueId()->toString()]);
+        return isset($this->bragItems[$player->getName()]);
     }
 
     /**
@@ -70,7 +70,7 @@ class BetterBrag extends PluginBase
      */
     public function startBragging(Player $player) : void
     {
-        $this->bragItems[$player->getUniqueId()->toString()] = $player->getInventory()->getItemInHand();
+        $this->bragItems[$player->getName()] = $player->getInventory()->getItemInHand();
     }
 
     /**
@@ -80,7 +80,7 @@ class BetterBrag extends PluginBase
     public function stopBragging(Player $player) : bool
     {
         if($this->isBragging($player)) {
-            unset($this->bragItems[$player->getUniqueId()->toString()]);
+            unset($this->bragItems[$player->getName()]);
             return true;
         } else {
             return false;
@@ -93,6 +93,6 @@ class BetterBrag extends PluginBase
      */
     public function getBraggingItem(Player $player) : ?Item
     {
-        return $this->isBragging($player) ? $this->bragItems[$player->getUniqueId()->toString()] : null;
+        return $this->isBragging($player) ? $this->bragItems[$player->getName()] : null;
     }
 }
