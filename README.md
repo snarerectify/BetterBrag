@@ -34,13 +34,13 @@ Various methods can be found below:
 ```php
 $instance->getBragItems(); // returns an array with player name as key, Item instance as value.
 
-$instance->isBragging(Player $player); returns true or false depending on whether or not the specified player is bragging.
+$instance->isBragging(Player $player); // returns true or false depending on whether or not the specified player is bragging.
 
-$instance->startBragging(Player $player); causes the specified player to brag about the item in their hand.
+$instance->startBragging(Player $player); // causes the specified player to brag about the item in their hand.
 
-$instance->stopBragging(Player $player); returns true if able to stop playing bragging, false if not.
+$instance->stopBragging(Player $player); // returns true if able to stop playing bragging, false if not.
 
-$instance->getBraggingItem(Player $player); returns Item instance if player is bragging, null if not.
+$instance->getBraggingItem(Player $player); // returns Item instance if player is bragging, null if not.
 ```
 
 ## Support
