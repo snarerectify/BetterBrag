@@ -6,9 +6,8 @@ projects:
   BetterBrag:
     path: ""
     libs:
-      - src: ACM-PocketMine-MP/Commando/Commando
-        version: ^3.2.1
-        branch: PM5
+      - src: Paroxity/Commando/Commando
+        version: ^3.0.0
       - src: muqsit/InvMenu/InvMenu
         version: ^4.6.5
         branch: "pm5"
