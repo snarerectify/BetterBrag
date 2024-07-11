@@ -5,6 +5,7 @@ declare(strict_types = 1);
 namespace snare\BetterBrag\command\subCommand;
 
 use CortexPE\Commando\BaseSubCommand;
+use pocketmine\block\BlockTypeIds;
 use pocketmine\command\CommandSender;
 use pocketmine\player\Player;
 use snare\BetterBrag\BetterBrag;
@@ -30,7 +31,7 @@ class BragStartSubCommand extends BaseSubCommand
     {
         if(!$sender instanceof Player) return;
 
-        if($sender->getInventory()->getItemInHand()->getTypeId() === 0) {
+        if($sender->getInventory()->getItemInHand()->getTypeId() === BlockTypeIds::AIR) {
             $sender->sendMessage(BetterBrag::getBetterBrag()->getConfig()->get("empty-hand"));
             return;
         }
