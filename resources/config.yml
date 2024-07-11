@@ -1,0 +1,12 @@
+empty-hand: "§cPlease hold the item you wish to brag!"
+started-bragging: "§aYou have started bragging about §d{ITEM}§a!"
+not-bragging: "§cYou are not currently bragging about any item!"
+stopped-bragging: "§cYou have stopped bragging!"
+specify-valid-player: "§cPlease specify a valid player."
+player-not-bragging: "§d{PLAYER} §cis not currently bragging about any item."
+brag-inventory-name: "§e{PLAYER}'s §d{ITEM}"
+broadcast-brag: true
+brag-broadcast-message: "§d{PLAYER} §ehas began bragging about §d{ITEM}§e, use /brag view §d{PLAYER} §eto find out more."
+bragging-list-title: "§eBragging List"
+no-items-bragged: "§cNo items are currently being bragged."
+brag-entry: "§e{PLAYER} §r=> §d{ITEM}"

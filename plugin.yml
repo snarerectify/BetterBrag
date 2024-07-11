@@ -1,0 +1,19 @@
+name: BetterBrag
+author: snare
+api: 5.0.0
+version: 1.0.0
+main: snare\BetterBrag\BetterBrag
+
+permissions:
+  brag.command:
+    default: true
+    children:
+      brag.command.start:
+        default: true
+      brag.command.stop:
+        default: true
+      brag.command.view:
+        default: true
+      brag.command.list:
+        default: true
+ssdf
