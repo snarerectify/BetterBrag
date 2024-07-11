@@ -16,4 +16,3 @@ permissions:
         default: true
       brag.command.list:
         default: true
-ssdf
