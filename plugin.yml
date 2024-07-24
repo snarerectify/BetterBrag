@@ -5,13 +5,13 @@ version: 1.0.0
 main: snare\BetterBrag\BetterBrag
 
 permissions:
-  brag.command:
+  betterbrag.brag.command:
     default: true
-  brag.command.start:
+  betterbrag.command.start:
     default: true
-  brag.command.stop:
+  betterbrag.command.stop:
     default: true
-  brag.command.view:
+  betterbrag.command.view:
     default: true
-  brag.command.list:
+  betterbrag.command.list:
     default: true

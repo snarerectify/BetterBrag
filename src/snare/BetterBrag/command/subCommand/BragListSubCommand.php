@@ -16,7 +16,7 @@ class BragListSubCommand extends BaseSubCommand
 
     public function prepare(): void
     {
-        $this->setPermission("brag.command.list");
+        $this->setPermission("betterbrag.command.list");
     }
 
     public function onRun(CommandSender $sender, string $aliasUsed, array $args): void

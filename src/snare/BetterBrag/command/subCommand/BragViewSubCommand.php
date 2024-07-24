@@ -25,7 +25,7 @@ class BragViewSubCommand extends BaseSubCommand
      */
     public function prepare(): void
     {
-        $this->setPermission("brag.command.view");
+        $this->setPermission("betterbrag.command.view");
         $this->registerArgument(0, new RawStringArgument("player"));
     }
 

@@ -18,7 +18,7 @@ class BragStopSubCommand extends BaseSubCommand
 
     public function prepare(): void
     {
-        $this->setPermission("brag.command.stop");
+        $this->setPermission("betterbrag.command.stop");
     }
 
     /**

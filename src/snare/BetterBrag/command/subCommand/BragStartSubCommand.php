@@ -20,7 +20,7 @@ class BragStartSubCommand extends BaseSubCommand
 
     public function prepare() : void
     {
-        $this->setPermission("brag.command.start");
+        $this->setPermission("betterbrag.command.start");
     }
 
     /**
