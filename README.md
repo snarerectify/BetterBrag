@@ -13,7 +13,6 @@ Advanced bragging plugin for Pocketmine-MP.
  3. Restart server.
 
 ## Commands
-
 | Command                                           | Description                                                   | Permission         |                                                             
 |---------------------------------------------------|---------------------------------------------------------------|--------------------|
 | /brag                                             | Brag management command.                                      | brag.command       | 
@@ -32,16 +31,21 @@ $instance = BetterBrag::getBetterBrag();
 
 Various methods can be found below:
 ```php
-$instance->getBragItems(); // returns an array with player name as key, Item instance as value.
+$manager = $instance->getDataSessionManager(); // returns an instance of the DataSessionManager class.
 
-$instance->isBragging(Player $player); // returns true or false depending on whether or not the specified player is bragging.
+$session = $manager->getSession(string $name); // returns a DataSession instance if found, null if not.
 
-$instance->startBragging(Player $player); // causes the specified player to brag about the item in their hand.
+$session->setRank(string $rank); // sets a players rank, the same can be done with prestige & blocks broken.
 
-$instance->stopBragging(Player $player); // returns true if able to stop playing bragging, false if not.
+$session->getRank(); // returns the players rank, the same can be down with prestige & blocks broken.
 
 $instance->getBraggingItem(Player $player); // returns Item instance if player is bragging, null if not.
 ```
+
+## Setup
+ - In order to utilise the block-requirement features for prestiging, the worlds in which players are mining in
+ must have names a-z, being any single letter between a and z, this is to indicate that they are mines.
+ - Occasionally the ScoreHud ceases to work, if this occurs, simply restart your server.
 
 ## Support
 Reach out on discord `snare_gale` if having any issues or if you need help with configuration.
