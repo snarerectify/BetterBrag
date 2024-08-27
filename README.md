@@ -1,3 +1,6 @@
+[![](https://poggit.pmmp.io/shield.state/BetterBrag)](https://poggit.pmmp.io/p/BetterBrag)
+[![](https://poggit.pmmp.io/shield.dl.total/BetterBrag)](https://poggit.pmmp.io/p/BetterBrag)
+
 # BetterBrag
 
 Advanced bragging plugin for Pocketmine-MP.
@@ -31,21 +34,16 @@ $instance = BetterBrag::getBetterBrag();
 
 Various methods can be found below:
 ```php
-$manager = $instance->getDataSessionManager(); // returns an instance of the DataSessionManager class.
+$instance->getBragItems(); // returns an array with player name as key, Item instance as value.
 
-$session = $manager->getSession(string $name); // returns a DataSession instance if found, null if not.
+$instance->isBragging(Player $player); // returns true or false depending on whether or not the specified player is bragging.
 
-$session->setRank(string $rank); // sets a players rank, the same can be done with prestige & blocks broken.
+$instance->startBragging(Player $player); // causes the specified player to brag about the item in their hand.
 
-$session->getRank(); // returns the players rank, the same can be down with prestige & blocks broken.
+$instance->stopBragging(Player $player); // returns true if able to stop playing bragging, false if not.
 
 $instance->getBraggingItem(Player $player); // returns Item instance if player is bragging, null if not.
 ```
-
-## Setup
- - In order to utilise the block-requirement features for prestiging, the worlds in which players are mining in
- must have names a-z, being any single letter between a and z, this is to indicate that they are mines.
- - Occasionally the ScoreHud ceases to work, if this occurs, simply restart your server.
 
 ## Support
 Reach out on discord `snare_gale` if having any issues or if you need help with configuration.
